@@ -499,6 +499,212 @@ Due to the 48-hour hackathon timeline, the **Demo Video:** [Watch on YouTube](ht
 
 Native gasless transactions & superior UX.
 
+### Step 1: Create Your Account
+
+1. Visit **[monipay.xyz/tempo](https://monipay.xyz/tempo)**
+2. Tap **"Get Started"**
+3. Choose a **MoniTag** (your unique payment username, e.g. `@alice`)
+4. Set a **4-digit PIN** — this encrypts your wallet key locally
+5. Confirm PIN → your wallet is generated instantly (no seed phrase, no extension)
+6. You're in! You'll land on your **Personal Dashboard**
+
+> **Already have an account?** Tap **"Sign In"** → enter your Private Key-then create a new PIN on the lock screen.
+
+---
+
+### Step 2: Fund Your Wallet (Faucet)
+
+Your wallet starts at $0. On Tempo Testnet, you get free funds:
+
+1. Tap **"Fund Wallet"** on your dashboard
+2. Select the **Tempo** tab
+3. Click **"Get Testnet Funds"** — this opens [faucet.tempo.xyz](https://faucet.tempo.xyz)
+4. Paste your **MoniPay wallet address** (shown in the modal) into the faucet
+5. Request funds → you'll receive **1,000,000 AlphaUSD (αUSD)**
+6. Return to MoniPay — your balance updates automatically
+
+> **Alternative:** Copy your wallet address from the **Direct Deposit** tab and send AlphaUSD from any external wallet.
+
+---
+
+### Step 3: Activate Your Wallet
+
+Before your first payment, a one-time activation is required:
+
+1. Go to **Settings** (gear icon)
+2. You'll see the **Network Activation Status** card
+3. Tap **"Activate"** — this sends a one-time approval transaction to the MoniPayRouter contract
+4. Confirm with your **PIN**
+5. Once activated, the status shows ✅ — you can now send and receive gasless payments
+
+> **Note:** Tempo activation requires a small AlphaUSD balance (> 0.01 αUSD) to cover the approval transaction. If insufficient, the UI shows a "Get Funds" link to the faucet.
+
+---
+
+### Step 4: Send Money via MoniTag
+
+#### In-App (P2P Transfer)
+1. From your dashboard, tap **"Send"**
+2. Enter the recipient's **MoniTag** (e.g. `@bob`)
+3. Enter the **amount** in αUSD
+4. Tap **"Pay"** → confirm with your **PIN**
+5. Transaction executes gaslessly — recipient gets **100% of the amount**
+6. Both parties see the transaction in their **Transaction History**
+
+#### Via QR Code
+1. Tap **"Send"** → select **"Scan QR"**
+2. Scan the recipient's MoniPay QR code
+3. Amount and recipient are pre-filled → confirm and pay
+
+---
+
+### Step 5: Receive Money
+
+#### Share Your MoniTag
+Simply tell the sender your MoniTag (e.g. `@alice`) — they can send from their app or via Twitter.
+
+#### Show Your QR Code
+1. Tap **"Receive"** on your dashboard
+2. **MoniPay tab**: Shows a branded QR code for in-app transfers
+3. **External Wallet tab**: Shows your plain wallet address QR for transfers from non-MoniPay wallets
+4. Tap the address to **copy** it for sharing
+
+---
+
+### Step 6: Use Merchant Mode
+
+Switch to Merchant mode for business features:
+
+1. Tap the **mode toggle** (top of dashboard) → switch to **"Merchant"**
+2. You now have access to the full Merchant POS dashboard
+
+#### Product Catalog & Quick Add
+1. Go to **Products** → tap **"+"** to add items (name, price, icon)
+2. Products appear as **Quick Add** tiles on the POS screen
+3. Tap products to build a cart → total updates automatically
+4. Tap **"Charge"** → generates a QR code for the customer to scan and pay
+
+#### Manual Amount Entry
+1. If the cart is empty, use the **numeric keypad** to enter a custom amount
+2. Tap **"Charge"** → same QR flow
+
+#### Invoices
+1. Go to **Invoices** → tap **"New Invoice"**
+2. Enter recipient MoniTag, amount, memo, and optional line items
+3. Send the invoice — recipient receives it and can pay with one tap
+
+#### Payment Links
+1. Go to **Payment Links** → create a shareable link
+2. Set a name, amount, and optional usage limit
+3. Share the link — anyone can pay via the hosted checkout page
+
+#### Revenue Analytics
+1. The **Analytics** tab shows sales volume, customer count, and trends
+2. Export your transaction history as **CSV** for accounting
+
+#### Customer CRM
+1. The **Customers** tab auto-tracks everyone who's paid you
+2. View purchase history, total spent, and add notes/tags
+
+---
+
+### Step 7: Set Up MoniBot (Social Payments)
+
+MoniBot lets you send money and run giveaways directly from Twitter.
+
+#### Link Your X (Twitter) Account
+1. Go to **Settings** → **Social Accounts**
+2. Tap **"Link X Account"**
+3. Enter your X username
+4. MoniBot generates a **verification code**
+5. Tweet the code from your X account
+6. MoniPay verifies and links your handle
+
+#### Approve Bot Allowance
+MoniBot needs permission to spend from your wallet for social commands:
+
+1. Go to **Settings** → **MoniBot** section
+2. Set your **Bot Allowance** (e.g. $100 αUSD) — this is the maximum MoniBot can spend on your behalf
+3. Tap **"Approve"** → confirm with PIN
+4. This sends a one-time on-chain approval to the MoniBotRouter contract
+
+#### Send via Twitter (P2P)
+Once linked and approved, tweet commands like:
+
+```
+@monibot send $5 to @alice on tempo
+@monibot send $1 each to @alice, @bob, @charlie on tempo
+@monibot pay $10 to @merchant alphausd
+```
+
+- MoniBot parses the command, resolves MoniTags, and executes on-chain
+- A confirmation reply appears on your tweet within ~30 seconds
+- Keywords: use `on tempo`, `tempo`, `alphausd`, or `αusd` to target the Tempo network
+
+#### Run a Campaign (Batch Giveaway)
+Campaigns let you distribute funds to multiple users automatically:
+
+1. Go to the **MoniBot Admin Dashboard** (`/monibot`)
+2. Open the **Campaigns** tab → **"New Campaign"**
+3. Select **Tempo** as the network
+4. Set the **grant amount** per person (e.g. $1 αUSD)
+5. Set **max participants** and **total budget**
+6. Write a campaign message (or let AI generate one)
+7. Launch → MoniBot posts the campaign tweet automatically
+8. Users reply to the tweet to participate
+9. MoniBot's **Gemini AI** evaluates each reply for quality and blocks spam
+10. Qualified participants receive AlphaUSD grants directly to their wallets
+11. Confirmation replies are posted for each successful grant
+
+> **Tip:** Fund the MoniBotRouter contract with sufficient AlphaUSD before launching campaigns. You can deposit via the **Contracts** tab in the admin dashboard.
+
+---
+
+### Step 8: Developer / API Integration
+
+For merchants who want to accept MoniPay payments on their websites:
+
+1. Go to **Settings** → **Developer**
+2. Generate **API Keys** (Public: `pk_live_...`, Secret: `sk_live_...`)
+3. Use the API to create orders programmatically
+4. Set a **Webhook URL** to receive payment confirmations (HMAC-SHA256 signed)
+5. Integrate the **Chrome Extension** for one-click checkout on merchant sites
+
+#### Hosted Checkout
+Share a payment link: `monipay.xyz/pay?merchantId=YOUR_TAG&amount=10`
+Customers pay via MoniPay QR, PayTag login, or external wallet.
+
+---
+
+### Step 9: Explore Transaction History
+
+1. Tap **"History"** on your dashboard
+2. View all sent/received transactions with timestamps and amounts
+3. Tap any transaction to open the **Receipt Modal** with full details:
+   - Transaction hash
+   - Sender/receiver MoniTags
+   - Fee breakdown
+   - On-chain verification link ([explore.tempo.xyz](https://explore.tempo.xyz))
+
+---
+
+### Quick Reference: Twitter Commands
+
+| Command | Example |
+|---------|---------|
+| **Send to one person** | `@monibot send $5 to @alice on tempo` |
+| **Send to multiple** | `@monibot send $1 each to @alice, @bob on tempo` |
+| **Pay a merchant** | `@monibot pay $10 to @shopname alphausd` |
+
+### Quick Reference: Network Keywords
+
+| Keyword | Network |
+|---------|---------|
+| `on tempo` / `tempo` | Tempo Testnet (AlphaUSD) |
+| `usdt` / `bnb` / `bsc` | BSC (USDT) |
+| *(default, no keyword)* | Base (USDC) |
+
+
 ---
 ---
 
