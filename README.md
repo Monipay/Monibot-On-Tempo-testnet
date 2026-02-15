@@ -482,6 +482,24 @@ npm start
 - **Anti-gaming intelligence** — Gemini-powered spam detection
 - **Strategic campaign scheduling** with temporal task queue
 
+
+
+
+
+## ⚠️ Demo Video Notice
+
+Due to the 48-hour hackathon timeline, the **Demo Video:** [Watch on YouTube](https://youtu.be/zUKhtEznxaM?si=ooKOCsPRztq0Q8pS) shows our **BSC implementation** as proof of MoniBot's capabilities.
+
+**What's Live on Tempo:**
+- ✅ Smart Contract: [0xdFA5fE...](https://explore.tempo.xyz/address/0xdFA5fE220cE7C4BCBb1180686666b803DfAE8ED3)
+- ✅ Frontend: [monipay.xyz/tempo](https://monipay.xyz/tempo)
+- 🚧 Worker bot integration (in progress)
+
+**But the exact implementation is currently running on Tempo testnet fully integrated with a critical difference:**
+
+Native gasless transactions & superior UX.
+
+---
 ---
 
 ## 🗺️ Roadmap
