@@ -5,11 +5,11 @@
 <h1 align="center">MoniPay × Tempo</h1>
 
 <p align="center">
-  <strong>True Gasless Payments. Autonomous AI Agents. Zero Compromise.</strong>
+  <strong>True Gasless Payments. Agentic Commerce. Zero Compromise.</strong>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Tempo_Hackathon-2025-blue?style=for-the-badge" alt="Tempo Hackathon" />
+  <img src="https://img.shields.io/badge/Tempo_Hackathon-2026-blue?style=for-the-badge" alt="Tempo Hackathon" />
   <img src="https://img.shields.io/badge/Live_on-Testnet-green?style=for-the-badge" alt="Live on Testnet" />
   <img src="https://img.shields.io/badge/Contracts-Verified-brightgreen?style=for-the-badge" alt="Verified Contracts" />
   <img src="https://img.shields.io/badge/Gas_Fees-$0.00-orange?style=for-the-badge" alt="Zero Gas" />
