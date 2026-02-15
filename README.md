@@ -22,21 +22,6 @@
   <a href="https://explore.tempo.xyz/address/0x78A824fDE7Ee3E69B2e2Ee52d1136EECD76749fc">📜 Verified Contract</a>
 </p>
 
----
-
-## 📊 Quick Stats
-
-| Metric | Value |
-|--------|-------|
-| **Transactions Processed** | 100+ |
-| **Active Users** | 50+ |
-| **Gas Fees Paid by Users** | **$0.00** (100% sponsored) |
-| **Avg Transaction Time** | ~30 seconds |
-| **Chains Supported** | Base · BSC · **Tempo** |
-| **Smart Contracts Deployed** | 6 (2 per chain) |
-| **Bot Uptime** | 99.9% |
-
----
 
 ## 🔴 The Problem
 
@@ -364,63 +349,6 @@ const [hash1, hash2, hash3] = await Promise.all([
 
 ---
 
-## 🚀 Try It Now
-
-### Web App
-1. Visit **[monipay.xyz/tempo](https://monipay.xyz/tempo)**
-2. Click **"Get Started"** — create a MoniTag and PIN (no MetaMask needed)
-3. Fund your wallet at **[faucet.tempo.xyz](https://faucet.tempo.xyz)**
-4. Send a payment to any MoniTag — gasless, instant
-
-### Via Twitter
-1. Create your MoniPay account at [monipay.xyz/tempo](https://monipay.xyz/tempo)
-2. Link your Twitter handle in Settings
-3. Tweet: **`@monibot send $1 to @yourfriend on tempo`**
-4. Watch it arrive in ~30 seconds
-5. Verify on [explore.tempo.xyz](https://explore.tempo.xyz)
-
----
-
-## 📂 Repository Structure
-
-```
-monipay/
-├── src/                              # React frontend (PWA)
-│   ├── pages/
-│   │   ├── Tempo.tsx                 # Tempo hackathon route
-│   │   └── Index.tsx                 # Main landing page
-│   ├── components/
-│   │   ├── TempoLanding.tsx          # Tempo-branded hero
-│   │   ├── Dashboard.tsx             # Multi-chain dashboard
-│   │   ├── NetworkToggle.tsx         # Chain switcher
-│   │   └── FundWalletModal/          # Deposit + faucet
-│   ├── config/
-│   │   └── chains.ts                 # Multi-chain configuration
-│   ├── contexts/
-│   │   └── PayTagContext.tsx         # Global wallet state
-│   └── lib/
-│       └── wallet.ts                 # Key generation + encryption
-├── contracts/
-│   ├── MoniBotRouter.sol             # Bot execution router
-│   ├── MoniPayRouter.sol             # Payment router (Base)
-│   └── MoniPayRouter.bsc.sol         # Payment router (BSC)
-├── worker-bot-tempo/                 # Tempo worker bot (Node.js)
-├── reply-bot-tempo/                  # Tempo reply bot (Node.js)
-├── worker-bot/                       # Base worker bot
-├── worker-bot-bsc/                   # BSC worker bot
-├── vp-social/                        # Base reply agent
-├── reply-bot-bsc/                    # BSC reply agent
-├── supabase/
-│   └── functions/                    # Edge Functions (Deno)
-│       ├── relay-payment/            # Multi-chain gasless relayer
-│       ├── monibot-ai/               # AI reply generation
-│       ├── monibot-campaign/         # Campaign management
-│       └── ...                       # Products, orders, invoices
-└── chrome-extension/                 # Browser extension (Manifest V3)
-```
-
----
-
 ## 🛠️ Setup & Installation
 
 ### Prerequisites
@@ -481,8 +409,6 @@ npm start
 - **Autonomous decision-making** — AI evaluates, executes, confirms
 - **Anti-gaming intelligence** — Gemini-powered spam detection
 - **Strategic campaign scheduling** with temporal task queue
-
-
 
 
 
@@ -613,7 +539,7 @@ Switch to Merchant mode for business features:
 MoniBot lets you send money and run giveaways directly from Twitter.
 
 #### Link Your X (Twitter) Account
-1. Go to **Settings** → **Social Accounts**
+1. Go to **Settings** → **AI & Automation**
 2. Tap **"Link X Account"**
 3. Enter your X username
 4. MoniBot generates a **verification code**
@@ -644,19 +570,7 @@ Once linked and approved, tweet commands like:
 #### Run a Campaign (Batch Giveaway)
 Campaigns let you distribute funds to multiple users automatically:
 
-1. Go to the **MoniBot Admin Dashboard** (`/monibot`)
-2. Open the **Campaigns** tab → **"New Campaign"**
-3. Select **Tempo** as the network
-4. Set the **grant amount** per person (e.g. $1 αUSD)
-5. Set **max participants** and **total budget**
-6. Write a campaign message (or let AI generate one)
-7. Launch → MoniBot posts the campaign tweet automatically
-8. Users reply to the tweet to participate
-9. MoniBot's **Gemini AI** evaluates each reply for quality and blocks spam
-10. Qualified participants receive AlphaUSD grants directly to their wallets
-11. Confirmation replies are posted for each successful grant
-
-> **Tip:** Fund the MoniBotRouter contract with sufficient AlphaUSD before launching campaigns. You can deposit via the **Contracts** tab in the admin dashboard.
+1. Tweet commands such as "@Monibot send $50 aUSD to the first 5 people who reply this post with thier Monitag".
 
 ---
 
@@ -731,7 +645,7 @@ Customers pay via MoniPay QR, PayTag login, or external wallet.
 
 ## 👤 Team
 
-**Solo Builder**: [@wallstreetjade](https://x.com/wallstreetjade)
+**Solo Builder**: [Jadeofwallstreet]([https://x.com/wallstreetjade](https://github.com/samuelchimmy))
 
 Full-stack engineer building MoniPay to solve real payment problems in emerging markets. The thesis: the best financial infrastructure is the one nobody notices.
 
@@ -760,7 +674,9 @@ MIT License — see [LICENSE](LICENSE) for details.
 ---
 
 <p align="center">
-  <strong>Built with 🖤 on Tempo Testnet</strong><br/><br/>
+ ```markdown
+<strong>Solo Built by <a href="https://github.com/samuelchimmy">Jadeofwallstreet</a> with 🖤 on Tempo Testnet</strong><br/><br/>
+```
   <em>"The best financial infrastructure is the one nobody notices."</em><br/><br/>
   MoniPay is a Hammer. Not a Dishwasher.<br/>
   And on Tempo, the hammer hits harder.
